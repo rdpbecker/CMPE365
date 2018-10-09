@@ -93,8 +93,10 @@ def printGates(gates):
 
 def main():
    ## Read the file to get the start and end times
-#   filepath = 
-#   startTimes, finishTimes = readFile()
+#   filepathStart = 
+#   filepathFinish = 
+#   startTimes = readStart(filepathStart) 
+#   finishTimes = readFile(filepathFinish)
    startTimes = [2,3,4,14.5,8,10]
    finishTimes = [3,5,14,16,15,13]
    lateMax = 0.5
