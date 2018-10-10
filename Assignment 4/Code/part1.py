@@ -47,19 +47,31 @@ def minG(aList,low):
    
 def printGates(gates):
    for i in range(len(gates)):
-      print "Gate ", i, ":\n"
+      print "Gate ", i+1, ":\n"
       for j in range(len(gates[i])):
-         print "Flight ", j, ":"
+         print "Flight ", j+1, ":"
          print "   Arrives at:", gates[i][j][0]
          print "   Departs at:", gates[i][j][1]
       print "\n\n"
       
+##############################################################
+## Writes the gates to a file using the same formatting as 
+## printGates()
+##
+## Parameters: gates - a list of lists containing the flights
+##                     directed towards each gate
+##             writePath - the path of the (.txt) file to 
+##                         be written to
+##
+## Returns: Nothing
+##############################################################
+      
 def writeGates(gates,writePath):
    with open(writePath,'wb') as writeFile:
       for i in range(len(gates)):
-         writeFile.write("Gate "+str(i)+":\n")
+         writeFile.write("Gate "+str(i+1)+":\n")
          for j in range(len(gates[i])):
-            writeFile.write("Flight "+str(gates[i][j][0])+":\n")
+            writeFile.write("Flight "+str(gates[i][j][0]+1)+":\n")
             writeFile.write("   Arrives at:"+str(gates[i][j][1])+"\n")
             writeFile.write("   Departs at:"+str(gates[i][j][2])+"\n")
          writeFile.write("\n\n")
@@ -124,6 +136,16 @@ def main():
    writePath = "../Outputs/Test1_1_1.txt"
    writeGates(gates,writePath)
    return gates
+
+##############################################################
+## Schedules the flights using method 2
+##
+## Parameters: None
+##
+## Returns: a list of lists of tuples, where the ith list 
+##          contains a list of tuples representing the flights
+##          directed to the ith gate
+##############################################################
       
 def main2():
    ## Read the file to get the start and end times
