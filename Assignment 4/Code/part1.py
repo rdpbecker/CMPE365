@@ -1,3 +1,5 @@
+import csv
+
 ##############################################################
 ## Finds the index of the minimum value in a list which is 
 ## greater than low
@@ -52,6 +54,32 @@ def printGates(gates):
          print "   Departs at:", gates[i][j][1]
       print "\n\n"
       
+def writeGates(gates,writePath):
+   with open(writePath,'wb') as writeFile:
+      for i in range(len(gates)):
+         writeFile.write("Gate "+str(i)+":\n")
+         for j in range(len(gates[i])):
+            writeFile.write("Flight "+str(gates[i][j][0])+":\n")
+            writeFile.write("   Arrives at:"+str(gates[i][j][1])+"\n")
+            writeFile.write("   Departs at:"+str(gates[i][j][2])+"\n")
+         writeFile.write("\n\n")
+      
+##############################################################
+## Reads a file
+##
+## Parameters: filepath - the filepath of the file to read
+##
+## Returns: a list with all the arrival or departure times 
+##############################################################
+
+def readFile(filepath):
+   timesList = []
+   with open(filepath,'rb') as csvfile:
+      theReader = csv.reader(csvfile)
+      for row in theReader:
+         timesList.append(float(row[0]))
+   return timesList
+      
 ##############################################################
 ## Performs the scheduling algorithm
 ##
@@ -63,11 +91,14 @@ def printGates(gates):
 
 def main():
    ## Read the file to get the start and end times
-#   filepath = 
-#   startTimes, finishTimes = readFile()
-   startTimes = [2,3,4,14.5,8,10]
-   finishTimes = [3,5,14,16,15,13]
+   filepathStart = "../Flight Lists/start1.csv"
+   filepathFinish = "../Flight Lists/finish1.csv"
+   startTimes = readFile(filepathStart) 
+   finishTimes = readFile(filepathFinish)
+#   startTimes = [2,3,4,14.5,8,10]
+#   finishTimes = [3,5,14,16,15,13]
    n = len(startTimes)
+   flightNums = range(n)
    num = 0
    gates = []
    ## While we haven't added everything to the gates list
@@ -86,11 +117,39 @@ def main():
          flight = minG(startTimes,finish)
          start = startTimes.pop(flight)
          finish = finishTimes.pop(flight)
-         flightList.append((start,finish))
+         flightList.append((flightNums.pop(flight),start,finish))
       num = num + len(flightList)
       gates.append(flightList)
    
-   printGates(gates)
+   writePath = "../Outputs/Test1_1_1.txt"
+   writeGates(gates,writePath)
+   return gates
+      
+def main2():
+   ## Read the file to get the start and end times
+   filepathStart = "../Flight Lists/start1.csv"
+   filepathFinish = "../Flight Lists/finish1.csv"
+   startTimes = readFile(filepathStart) 
+   finishTimes = readFile(filepathFinish)
+#   startTimes = [2,3,4,14.5,8,10]
+#   finishTimes = [3,5,14,16,15,13]
+   n = len(startTimes)
+   num = 0
+   gates = []
+   numGates = 0
+   for flight in range(n):
+      gate = 0
+      while gate < numGates:
+         if startTimes[flight] > gates[gate][-1][2]:
+            gates[gate].append((flight,startTimes[flight],finishTimes[flight]))
+            break
+         gate = gate + 1
+      if gate == numGates:
+         gates.append([(flight,startTimes[flight],finishTimes[flight])])
+         numGates = numGates + 1
+         
+   writePath = "../Outputs/Test1_1_2.txt"
+   writeGates(gates,writePath)
    return gates
       
 list0 = [2,3,4,7,8,10]

@@ -1,4 +1,4 @@
-import random
+import random, csv
 
 ##############################################################
 ## Add random lateness to arrival and departure times in place
@@ -83,6 +83,22 @@ def printGates(gates):
       print "\n\n"
       
 ##############################################################
+## Reads a file
+##
+## Parameters: filepath - the filepath of the file to read
+##
+## Returns: a list with all the arrival or departure times 
+##############################################################
+
+def readFile(filepath):
+   timesList = []
+   with open(filepath,'rb') as csvfile:
+      theReader = csv.reader(csvfile)
+      for row in theReader:
+         timesList.append(float(row[0]))
+   return timesList
+
+##############################################################
 ## Performs the scheduling algorithm
 ##
 ## Parameters: None
@@ -93,12 +109,12 @@ def printGates(gates):
 
 def main():
    ## Read the file to get the start and end times
-#   filepathStart = 
-#   filepathFinish = 
-#   startTimes = readStart(filepathStart) 
-#   finishTimes = readFile(filepathFinish)
-   startTimes = [2,3,4,14.5,8,10]
-   finishTimes = [3,5,14,16,15,13]
+   filepathStart = "../Flight Lists/start1"
+   filepathFinish = "../Flight Lists/finish1"
+   startTimes = readFile(filepathStart) 
+   finishTimes = readFile(filepathFinish)
+#   startTimes = [2,3,4,14.5,8,10]
+#   finishTimes = [3,5,14,16,15,13]
    lateMax = 0.5
    randomify(startTimes,finishTimes,lateMax)
    n = len(startTimes)
@@ -128,4 +144,4 @@ def main():
    return gates
       
 list0 = [2,3,4,7,8,10]
-main()
+main('../Flight Lists/start1.csv')
