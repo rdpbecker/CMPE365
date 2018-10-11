@@ -142,7 +142,7 @@ def readFile(filepath):
 ##          flights that arrived and departed late
 ##############################################################
 
-def main(lateMax,split):
+def main(lateMax,split,i,m):
    ## Read the file to get the start and end times
    filepathStart = "../Flight Lists/start2.csv"
    filepathFinish = "../Flight Lists/finish2.csv"
@@ -182,11 +182,11 @@ def main(lateMax,split):
 sum = 0
 m = 1000
 lateList = [0.25,0.5,0.75,1.0]
-probList = [0.2,0.4,0.6,0.8,1.0]
+probList = [0.1]
 for late in lateList:
    for prob in probList:
       sum = 0
       for i in range(m):
          gates, start, end = main(late,prob,i,m)
          sum = sum + len(gates)
-      print float(sum)/m
+      print "Lateness ", late, ", Probability ", prob, ":", float(sum)/m

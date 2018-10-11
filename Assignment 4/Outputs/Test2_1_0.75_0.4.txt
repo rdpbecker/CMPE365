@@ -1,68 +1,59 @@
-38.9312977099% of flights arrived late
-40.4580152672% of flights departed late
+34.3511450382% of flights arrived late
+41.2213740458% of flights departed late
 Gate 1:
-Flight 1:
-   Arrives at:6.07
-   Departs at:8.7728
-Flight 19:
-   Arrives at:8.97
-   Departs at:10.7577113891
-Flight 30:
-   Arrives at:10.8110881401
-   Departs at:11.43
-Flight 41:
-   Arrives at:11.5280184258
-   Departs at:12.2795816063
-Flight 49:
-   Arrives at:12.4907523811
-   Departs at:14.304
-Flight 68:
-   Arrives at:14.43
-   Departs at:16.561
-Flight 82:
-   Arrives at:16.6559364513
-   Departs at:18.556
-Flight 104:
-   Arrives at:18.65
-   Departs at:19.789
-Flight 110:
-   Arrives at:19.9412001506
-   Departs at:20.782
-Flight 117:
-   Arrives at:20.8071449806
-   Departs at:22.434
+Flight 2:
+   Arrives at:6.1
+   Departs at:6.6494
+Flight 6:
+   Arrives at:6.72
+   Departs at:10.508
+Flight 31:
+   Arrives at:10.5200489914
+   Departs at:12.701
+Flight 53:
+   Arrives at:12.784868644
+   Departs at:15.1532764548
+Flight 74:
+   Arrives at:15.3444241501
+   Departs at:18.113
+Flight 100:
+   Arrives at:18.19
+   Departs at:19.254
+Flight 107:
+   Arrives at:19.36
+   Departs at:20.617
+Flight 122:
+   Arrives at:20.63
+   Departs at:22.57
 
 
 Gate 2:
-Flight 5:
-   Arrives at:6.26
-   Departs at:7.3128
-Flight 8:
-   Arrives at:7.61627430347
-   Departs at:9.0209
+Flight 3:
+   Arrives at:6.14
+   Departs at:9.1787
 Flight 21:
    Arrives at:9.22
-   Departs at:10.6112184508
-Flight 31:
-   Arrives at:10.6577345789
-   Departs at:12.701
-Flight 54:
-   Arrives at:12.82
-   Departs at:13.844
-Flight 63:
-   Arrives at:14.04
-   Departs at:15.8021842891
-Flight 77:
-   Arrives at:16.0003251519
-   Departs at:17.0892040893
-Flight 84:
-   Arrives at:17.2566221713
-   Departs at:17.7980956058
-Flight 92:
-   Arrives at:17.9007105589
-   Departs at:18.57
+   Departs at:10.109
+Flight 25:
+   Arrives at:10.11
+   Departs at:10.986
+Flight 32:
+   Arrives at:10.9864569923
+   Departs at:11.4376777402
+Flight 43:
+   Arrives at:11.57
+   Departs at:12.08
+Flight 49:
+   Arrives at:12.19
+   Departs at:14.304
+Flight 69:
+   Arrives at:14.58
+   Departs at:16.051
+Flight 81:
+   Arrives at:16.1
+   Departs at:19.2779106288
 Flight 105:
-   Arrives at:18.95
+   Arrives at:19.514
    Departs at:19.514
 Flight 108:
    Arrives at:19.56
@@ -72,384 +63,396 @@ Flight 118:
    Departs at:21.186
 Flight 130:
    Arrives at:21.27
-   Departs at:21.981
+   Departs at:22.672394782
 
 
 Gate 3:
-Flight 2:
-   Arrives at:6.41654379769
-   Departs at:7.19727075477
-Flight 11:
-   Arrives at:7.72
-   Departs at:8.3928
-Flight 12:
-   Arrives at:8.40015325894
-   Departs at:11.343
-Flight 42:
-   Arrives at:11.37
-   Departs at:12.108
+Flight 5:
+   Arrives at:6.26
+   Departs at:7.3128
+Flight 16:
+   Arrives at:8.23
+   Departs at:9.63110029295
+Flight 23:
+   Arrives at:9.66
+   Departs at:12.597
+Flight 55:
+   Arrives at:12.99
+   Departs at:14.1942720252
+Flight 67:
+   Arrives at:14.24
+   Departs at:16.8239001819
+Flight 88:
+   Arrives at:16.9
+   Departs at:18.1340665909
+Flight 101:
+   Arrives at:18.2
+   Departs at:19.85
+Flight 112:
+   Arrives at:20.05
+   Departs at:20.7
+Flight 124:
+   Arrives at:20.7783906684
+   Departs at:22.572
+
+
+Gate 4:
+Flight 1:
+   Arrives at:6.28994167463
+   Departs at:8.7728
+Flight 15:
+   Arrives at:8.77449525232
+   Departs at:9.0132
+Flight 20:
+   Arrives at:9.16
+   Departs at:11.7479745523
+Flight 46:
+   Arrives at:11.75
+   Departs at:14.622
+Flight 63:
+   Arrives at:14.676873684
+   Departs at:16.4676062173
+Flight 84:
+   Arrives at:16.7
+   Departs at:17.575
+Flight 95:
+   Arrives at:17.79
+   Departs at:19.757
+Flight 113:
+   Arrives at:20.06
+   Departs at:21.012
+Flight 119:
+   Arrives at:21.0574060888
+   Departs at:25.022
+
+
+Gate 5:
+Flight 7:
+   Arrives at:6.8
+   Departs at:9.94675445993
+Flight 26:
+   Arrives at:10.18
+   Departs at:12.068
 Flight 50:
    Arrives at:12.53
-   Departs at:15.5755296692
-Flight 81:
-   Arrives at:16.1
-   Departs at:18.632
+   Departs at:15.6748190834
+Flight 79:
+   Arrives at:15.7139424526
+   Departs at:16.455
+Flight 85:
+   Arrives at:16.72
+   Departs at:19.693
+Flight 111:
+   Arrives at:20.1660573963
+   Departs at:21.0193913016
+Flight 128:
+   Arrives at:21.06
+   Departs at:21.597
+
+
+Gate 6:
+Flight 4:
+   Arrives at:6.86832652378
+   Departs at:7.3636
+Flight 14:
+   Arrives at:8.43541406482
+   Departs at:9.6455
+Flight 27:
+   Arrives at:10.21
+   Departs at:10.858
+Flight 37:
+   Arrives at:11.08
+   Departs at:14.5443392351
+Flight 70:
+   Arrives at:14.58
+   Departs at:16.029
+Flight 80:
+   Arrives at:16.3041891273
+   Departs at:17.4025206165
+Flight 93:
+   Arrives at:17.49
+   Departs at:18.69
+Flight 103:
+   Arrives at:18.7555573007
+   Departs at:19.885
+Flight 114:
+   Arrives at:20.23
+   Departs at:20.766
+Flight 125:
+   Arrives at:20.7792216986
+   Departs at:22.321
+
+
+Gate 7:
+Flight 8:
+   Arrives at:7.16
+   Departs at:9.27492892409
+Flight 22:
+   Arrives at:9.45
+   Departs at:11.8257487991
+Flight 47:
+   Arrives at:11.95
+   Departs at:13.596050644
+Flight 60:
+   Arrives at:13.62
+   Departs at:14.824318166
+Flight 73:
+   Arrives at:14.95
+   Departs at:15.9738437245
+Flight 82:
+   Arrives at:16.32
+   Departs at:18.6106715554
+Flight 104:
+   Arrives at:18.65
+   Departs at:19.9998150917
+Flight 115:
+   Arrives at:20.34
+   Departs at:21.3093782989
+
+
+Gate 8:
+Flight 9:
+   Arrives at:7.17
+   Departs at:8.32757549387
+Flight 11:
+   Arrives at:8.45354132085
+   Departs at:8.45354132085
+Flight 17:
+   Arrives at:8.46
+   Departs at:11.7257111995
+Flight 45:
+   Arrives at:11.74
+   Departs at:14.7502856981
+Flight 72:
+   Arrives at:14.7661667742
+   Departs at:16.91
+Flight 89:
+   Arrives at:16.95
+   Departs at:19.0810034117
 Flight 106:
    Arrives at:19.18
    Departs at:21.543
 
 
-Gate 4:
-Flight 3:
-   Arrives at:6.53608126841
-   Departs at:9.1787
-Flight 22:
-   Arrives at:9.45
-   Departs at:11.824444862
-Flight 43:
-   Arrives at:11.83
-   Departs at:12.08
-Flight 51:
-   Arrives at:12.57
-   Departs at:13.6703443715
-Flight 64:
-   Arrives at:14.06
-   Departs at:15.1528889609
-Flight 75:
-   Arrives at:15.32
-   Departs at:17.199
-Flight 86:
-   Arrives at:17.323
-   Departs at:17.573
-Flight 89:
-   Arrives at:17.670421365
-   Departs at:18.8564317179
-Flight 107:
-   Arrives at:19.36
-   Departs at:20.9582085299
-Flight 128:
-   Arrives at:21.06
-   Departs at:22.2510632486
-
-
-Gate 5:
-Flight 4:
-   Arrives at:6.68216442611
-   Departs at:7.93686661014
+Gate 9:
+Flight 10:
+   Arrives at:7.18
+   Departs at:8.4876
 Flight 13:
-   Arrives at:8.17
-   Departs at:11.9822307843
-Flight 52:
-   Arrives at:12.58
-   Departs at:14.191
-Flight 67:
-   Arrives at:14.24
-   Departs at:16.2477708442
-Flight 78:
-   Arrives at:16.2922887537
-   Departs at:18.692
-Flight 109:
-   Arrives at:19.57
-   Departs at:21.9620093044
-
-
-Gate 6:
-Flight 7:
-   Arrives at:7.14742749062
-   Departs at:9.6035
-Flight 23:
-   Arrives at:9.66
-   Departs at:12.597
-Flight 47:
-   Arrives at:12.6317230397
-   Departs at:12.889
-Flight 55:
-   Arrives at:12.99
-   Departs at:13.534
-Flight 60:
-   Arrives at:13.6437776153
-   Departs at:14.54
-Flight 69:
-   Arrives at:14.58
-   Departs at:16.3061747234
-Flight 83:
-   Arrives at:16.32
-   Departs at:17.963
+   Arrives at:8.77909444063
+   Departs at:11.702
+Flight 48:
+   Arrives at:12.05
+   Departs at:14.6599466939
+Flight 68:
+   Arrives at:15.0000110178
+   Departs at:16.561
+Flight 86:
+   Arrives at:16.8
+   Departs at:17.6642382981
 Flight 98:
    Arrives at:18.05
    Departs at:19.697
-Flight 114:
-   Arrives at:20.23
-   Departs at:20.766
-Flight 126:
-   Arrives at:20.91
-   Departs at:21.8053907407
-
-
-Gate 7:
-Flight 9:
-   Arrives at:7.17
-   Departs at:8.89020132756
-Flight 20:
-   Arrives at:9.8322312046
-   Departs at:11.07
-Flight 38:
-   Arrives at:11.2
-   Departs at:15.1516891733
-Flight 72:
-   Arrives at:15.3577422265
-   Departs at:16.91
-Flight 90:
-   Arrives at:16.99
-   Departs at:18.6833972633
-Flight 115:
-   Arrives at:20.34
-   Departs at:21.0707638935
-Flight 120:
-   Arrives at:21.0756183521
-   Departs at:22.0254712191
-
-
-Gate 8:
-Flight 6:
-   Arrives at:7.18826464485
-   Departs at:10.508
-Flight 27:
-   Arrives at:10.5519302865
-   Departs at:10.858
-Flight 39:
-   Arrives at:11.2
-   Departs at:12.4951482256
-Flight 48:
-   Arrives at:12.6337866189
-   Departs at:14.331
-Flight 70:
-   Arrives at:14.58
-   Departs at:16.029
-Flight 79:
-   Arrives at:16.1109714248
-   Departs at:16.455
-Flight 85:
-   Arrives at:16.72
-   Departs at:19.693
-Flight 116:
-   Arrives at:20.42
-   Departs at:21.2028904318
-Flight 129:
-   Arrives at:21.412
-   Departs at:21.662
-
-
-Gate 9:
-Flight 10:
-   Arrives at:7.91047747526
-   Departs at:8.4876
-Flight 14:
-   Arrives at:8.49998077505
-   Departs at:9.85012567168
-Flight 24:
-   Arrives at:10.07
-   Departs at:11.646344912
-Flight 44:
-   Arrives at:11.7
-   Departs at:14.5109752484
-Flight 71:
-   Arrives at:14.61
-   Departs at:17.965
-Flight 96:
-   Arrives at:18.0525044545
-   Departs at:19.9040305298
-Flight 112:
-   Arrives at:20.45
-   Departs at:20.7
-Flight 127:
-   Arrives at:21.1418729115
-   Departs at:21.763
+Flight 117:
+   Arrives at:20.54
+   Departs at:22.434
 
 
 Gate 10:
-Flight 16:
-   Arrives at:8.23
-   Departs at:9.49879897121
-Flight 26:
-   Arrives at:10.18
-   Departs at:12.068
-Flight 53:
-   Arrives at:12.66
-   Departs at:14.5147210428
-Flight 62:
-   Arrives at:14.6928781768
-   Departs at:14.947
-Flight 73:
-   Arrives at:14.95
-   Departs at:15.971
-Flight 80:
-   Arrives at:16.3660969263
-   Departs at:16.91
-Flight 91:
-   Arrives at:17.08
-   Departs at:19.5680188234
-Flight 113:
-   Arrives at:20.4684069436
-   Departs at:21.012
-Flight 131:
-   Arrives at:21.5147945865
-   Departs at:22.4151816617
-
-
-Gate 11:
-Flight 15:
-   Arrives at:8.25905618669
-   Departs at:9.0132
-Flight 28:
-   Arrives at:10.3
-   Departs at:13.326
-Flight 58:
-   Arrives at:13.38
-   Departs at:14.479
-Flight 74:
-   Arrives at:15.07
-   Departs at:18.4921701084
-Flight 103:
-   Arrives at:18.52
-   Departs at:19.9313072466
-Flight 119:
-   Arrives at:20.56
-   Departs at:25.022
-
-
-Gate 12:
-Flight 17:
-   Arrives at:8.46
-   Departs at:11.636
-Flight 45:
-   Arrives at:11.74
-   Departs at:14.706
-Flight 76:
-   Arrives at:15.48
-   Departs at:16.012
-Flight 88:
-   Arrives at:16.9
-   Departs at:17.965
-Flight 93:
-   Arrives at:18.0800963623
-   Departs at:18.8502497006
-Flight 121:
-   Arrives at:20.6
-   Departs at:21.394
-
-
-Gate 13:
-Flight 18:
-   Arrives at:8.6
-   Departs at:9.8936
-Flight 29:
-   Arrives at:10.35
-   Departs at:11.4623910998
-Flight 46:
-   Arrives at:11.75
-   Departs at:15.2172132414
-Flight 87:
-   Arrives at:17.5316616311
-   Departs at:18.7536196447
-Flight 122:
-   Arrives at:20.63
-   Departs at:22.9066078454
-
-
-Gate 14:
-Flight 25:
-   Arrives at:10.3609124722
-   Departs at:10.986
-Flight 36:
-   Arrives at:11.2047510809
-   Departs at:15.6861458766
-Flight 94:
-   Arrives at:17.69
-   Departs at:20.7462040334
-
-
-Gate 15:
-Flight 32:
-   Arrives at:10.4
-   Departs at:11.149
+Flight 12:
+   Arrives at:8.83390947132
+   Departs at:11.343
 Flight 40:
-   Arrives at:11.23
+   Arrives at:11.6011075898
    Departs at:12.869
 Flight 56:
    Arrives at:13.03
-   Departs at:16.459
-Flight 95:
-   Arrives at:17.79
-   Departs at:19.757
-Flight 123:
-   Arrives at:20.63
-   Departs at:23.752801237
+   Departs at:16.5422763702
+Flight 91:
+   Arrives at:17.08
+   Departs at:19.2534106984
+Flight 109:
+   Arrives at:19.57
+   Departs at:21.737
+
+
+Gate 11:
+Flight 19:
+   Arrives at:8.97
+   Departs at:10.565
+Flight 33:
+   Arrives at:10.5855006449
+   Departs at:12.164
+Flight 51:
+   Arrives at:12.57
+   Departs at:13.2718516714
+Flight 58:
+   Arrives at:13.38
+   Departs at:14.5366143486
+Flight 71:
+   Arrives at:14.61
+   Departs at:18.3652458542
+Flight 97:
+   Arrives at:18.5204084333
+   Departs at:18.7503200035
+Flight 110:
+   Arrives at:19.58
+   Departs at:20.782
+Flight 126:
+   Arrives at:20.91
+   Departs at:22.2898211901
+
+
+Gate 12:
+Flight 18:
+   Arrives at:9.23749385813
+   Departs at:10.6301187057
+Flight 34:
+   Arrives at:10.72
+   Departs at:13.292
+Flight 54:
+   Arrives at:13.530394556
+   Departs at:14.2944959596
+Flight 76:
+   Arrives at:15.48
+   Departs at:16.012
+Flight 83:
+   Arrives at:16.32
+   Departs at:17.963
+Flight 92:
+   Arrives at:18.0711388051
+   Departs at:18.57
+Flight 102:
+   Arrives at:18.5873399138
+   Departs at:21.3999589609
+
+
+Gate 13:
+Flight 24:
+   Arrives at:10.269643494
+   Departs at:11.1772019185
+Flight 38:
+   Arrives at:11.2
+   Departs at:14.8
+Flight 77:
+   Arrives at:15.55
+   Departs at:16.499
+Flight 87:
+   Arrives at:17.1125035906
+   Departs at:18.284
+Flight 96:
+   Arrives at:18.3063429601
+   Departs at:19.8840930418
+Flight 121:
+   Arrives at:20.6411923486
+   Departs at:21.9022440348
+
+
+Gate 14:
+Flight 28:
+   Arrives at:10.3
+   Departs at:13.326
+Flight 61:
+   Arrives at:13.63
+   Departs at:16.5271444521
+Flight 90:
+   Arrives at:17.2649569775
+   Departs at:17.946
+Flight 99:
+   Arrives at:18.08
+   Departs at:19.585
+Flight 120:
+   Arrives at:20.6828309373
+   Departs at:21.809
+
+
+Gate 15:
+Flight 30:
+   Arrives at:10.4
+   Departs at:11.43
+Flight 44:
+   Arrives at:11.7
+   Departs at:13.797
+Flight 59:
+   Arrives at:14.0104044275
+   Departs at:14.5977119216
+Flight 75:
+   Arrives at:15.5619847723
+   Departs at:17.199
+Flight 94:
+   Arrives at:18.2010222523
+   Departs at:20.344
+Flight 127:
+   Arrives at:20.95
+   Departs at:21.763
 
 
 Gate 16:
-Flight 33:
-   Arrives at:10.5
-   Departs at:12.8060092097
-Flight 57:
-   Arrives at:13.1
-   Departs at:14.289
-Flight 100:
-   Arrives at:18.19
-   Departs at:19.254
-Flight 124:
-   Arrives at:20.66
-   Departs at:22.572
+Flight 29:
+   Arrives at:10.4489947612
+   Departs at:11.263
+Flight 42:
+   Arrives at:12.0600841199
+   Departs at:12.5083225615
+Flight 52:
+   Arrives at:12.58
+   Departs at:14.191
+Flight 65:
+   Arrives at:14.2625200985
+   Departs at:14.742
+Flight 78:
+   Arrives at:15.61
+   Departs at:19.207279318
+Flight 123:
+   Arrives at:21.0613540446
+   Departs at:23.5554498406
 
 
 Gate 17:
-Flight 34:
-   Arrives at:10.72
-   Departs at:13.5913414246
-Flight 65:
-   Arrives at:14.1
-   Departs at:15.2953487895
-Flight 101:
-   Arrives at:18.2
-   Departs at:19.85
-Flight 111:
-   Arrives at:20.6745688222
-   Departs at:21.3823038746
+Flight 36:
+   Arrives at:10.81
+   Departs at:15.2691795499
+Flight 116:
+   Arrives at:21.1041022078
+   Departs at:21.2430393005
+Flight 131:
+   Arrives at:21.28
+   Departs at:22.6850770602
 
 
 Gate 18:
 Flight 35:
-   Arrives at:10.73
+   Arrives at:11.1623362116
    Departs at:12.922
-Flight 59:
-   Arrives at:13.5051324417
-   Departs at:14.248
-Flight 99:
-   Arrives at:18.2711208697
-   Departs at:19.585
-Flight 125:
-   Arrives at:20.6825028799
-   Departs at:22.321
+Flight 57:
+   Arrives at:13.1
+   Departs at:14.289
+Flight 129:
+   Arrives at:21.12
+   Departs at:21.662
 
 
 Gate 19:
-Flight 37:
-   Arrives at:11.4289279061
-   Departs at:13.917
-Flight 66:
-   Arrives at:14.12
-   Departs at:16.034133529
-Flight 102:
-   Arrives at:18.35
-   Departs at:21.1611634521
+Flight 39:
+   Arrives at:11.2
+   Departs at:11.8540987731
+Flight 62:
+   Arrives at:14.02
+   Departs at:15.6175153753
 
 
 Gate 20:
-Flight 61:
-   Arrives at:14.1512796151
-   Departs at:16.4656977049
-Flight 97:
-   Arrives at:18.436695058
-   Departs at:18.686695058
+Flight 41:
+   Arrives at:11.26
+   Departs at:11.882
+Flight 64:
+   Arrives at:14.1013644539
+   Departs at:14.921
+
+
+Gate 21:
+Flight 66:
+   Arrives at:14.12
+   Departs at:16.1397195192
 
 
