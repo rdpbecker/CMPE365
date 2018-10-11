@@ -144,12 +144,10 @@ def readFile(filepath):
 
 def main(lateMax,split,i,m):
    ## Read the file to get the start and end times
-   filepathStart = "../Flight Lists/start2.csv"
-   filepathFinish = "../Flight Lists/finish2.csv"
+   filepathStart = "../Flight Lists/start1.csv"
+   filepathFinish = "../Flight Lists/finish1.csv"
    startTimes = readFile(filepathStart) 
    finishTimes = readFile(filepathFinish)
-#   startTimes = [2,3,4,14.5,8,10]
-#   finishTimes = [3,5,14,16,15,13]
    startLate, finishLate = randomify(startTimes,finishTimes,lateMax,split,split)
    n = len(startTimes)
    flightNums = range(n)
@@ -176,7 +174,7 @@ def main(lateMax,split,i,m):
       gates.append(flightList)
    ## Only bother printing the last one to a file
    if i == m-1:
-      writePath = '../Outputs/Test2_2_'+str(lateMax)+'_'+str(split)+'.txt'
+      writePath = '../Outputs/Test2_1_'+str(lateMax)+'_'+str(split)+'.txt'
       writeGates(startLate,finishLate,gates,writePath)
    return gates, startLate, finishLate
       
@@ -186,7 +184,7 @@ m = 1000
 ## List of maximum lateness to check
 lateList = [0.25,0.5,0.75,1.0]
 ## List of probabilities to check
-probList = [0.1,0.2,0.4,0.6,0.8,1.0]
+probList = [0.1,0.2,0.3,0.4,0.6,0.8,1.0]
 ## For each pair, find the average number of gates over m
 ## iterations and print it
 for late in lateList:

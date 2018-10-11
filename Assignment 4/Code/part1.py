@@ -107,8 +107,6 @@ def main():
    filepathFinish = "../Flight Lists/finish1.csv"
    startTimes = readFile(filepathStart) 
    finishTimes = readFile(filepathFinish)
-#   startTimes = [2,3,4,14.5,8,10]
-#   finishTimes = [3,5,14,16,15,13]
    n = len(startTimes)
    flightNums = range(n)
    num = 0
@@ -153,8 +151,6 @@ def main2():
    filepathFinish = "../Flight Lists/finish1.csv"
    startTimes = readFile(filepathStart) 
    finishTimes = readFile(filepathFinish)
-#   startTimes = [2,3,4,14.5,8,10]
-#   finishTimes = [3,5,14,16,15,13]
    n = len(startTimes)
    num = 0
    gates = []
