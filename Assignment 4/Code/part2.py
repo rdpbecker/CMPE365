@@ -174,15 +174,21 @@ def main(lateMax,split,i,m):
          flightList.append((flightNums.pop(flight),start,finish))
       num = num + len(flightList)
       gates.append(flightList)
+   ## Only bother printing the last one to a file
    if i == m-1:
       writePath = '../Outputs/Test2_2_'+str(lateMax)+'_'+str(split)+'.txt'
       writeGates(startLate,finishLate,gates,writePath)
    return gates, startLate, finishLate
       
 sum = 0
+## Number of loops for each test
 m = 1000
+## List of maximum lateness to check
 lateList = [0.25,0.5,0.75,1.0]
-probList = [0.1]
+## List of probabilities to check
+probList = [0.1,0.2,0.4,0.6,0.8,1.0]
+## For each pair, find the average number of gates over m
+## iterations and print it
 for late in lateList:
    for prob in probList:
       sum = 0
