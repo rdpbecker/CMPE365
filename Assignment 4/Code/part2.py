@@ -142,16 +142,15 @@ def readFile(filepath):
 ##          flights that arrived and departed late
 ##############################################################
 
-def main():
+def main(lateMax,split):
    ## Read the file to get the start and end times
-   filepathStart = "../Flight Lists/start1.csv"
-   filepathFinish = "../Flight Lists/finish1.csv"
+   filepathStart = "../Flight Lists/start2.csv"
+   filepathFinish = "../Flight Lists/finish2.csv"
    startTimes = readFile(filepathStart) 
    finishTimes = readFile(filepathFinish)
 #   startTimes = [2,3,4,14.5,8,10]
 #   finishTimes = [3,5,14,16,15,13]
-   lateMax = 0.5
-   startLate, finishLate = randomify(startTimes,finishTimes,lateMax)
+   startLate, finishLate = randomify(startTimes,finishTimes,lateMax,split,split)
    n = len(startTimes)
    flightNums = range(n)
    num = 0
@@ -175,14 +174,19 @@ def main():
          flightList.append((flightNums.pop(flight),start,finish))
       num = num + len(flightList)
       gates.append(flightList)
-   
-   writePath = '../Outputs/Test2_1_0.5.txt'
-   writeGates(startLate,finishLate,gates,writePath)
+   if i == m-1:
+      writePath = '../Outputs/Test2_2_'+str(lateMax)+'_'+str(split)+'.txt'
+      writeGates(startLate,finishLate,gates,writePath)
    return gates, startLate, finishLate
       
 sum = 0
 m = 1000
-for i in range(m):
-   gates, start, end = main()
-   sum = sum + len(gates)
-print float(sum)/m
+lateList = [0.25,0.5,0.75,1.0]
+probList = [0.2,0.4,0.6,0.8,1.0]
+for late in lateList:
+   for prob in probList:
+      sum = 0
+      for i in range(m):
+         gates, start, end = main(late,prob,i,m)
+         sum = sum + len(gates)
+      print float(sum)/m

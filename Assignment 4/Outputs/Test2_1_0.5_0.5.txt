@@ -1,3 +1,5 @@
+0.0% of flights arrived late
+0.0% of flights departed late
 Gate 1:
 Flight 1:
    Arrives at:6.07
