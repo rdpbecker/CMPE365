@@ -1,4 +1,4 @@
-import csv,populateGraph as popG
+import csv
 
 def readFile(filePath):
     lists = []
@@ -8,7 +8,8 @@ def readFile(filePath):
             list1 = row[0].split(',')
             list2 = []
             for thing in list1:
-                list2.append(int(thing))
+                if thing != '':
+                    list2.append(int(thing))
             lists.append(list2)
     return lists
 
@@ -17,6 +18,8 @@ def printLists(lists):
         print aList
 
 if __name__ == "__main__":
-    lists = readFile("../Test Data/lists.csv")
+    lists = readFile("../Test Data/testList2.csv")
     printLists(lists)
-    print popG.findMax(lists)
+    num = popG.findMax(lists)
+    for aList in lists:
+        popG.toBinary(aList,num)
