@@ -1,5 +1,3 @@
-import printing
-
 def findMax(lists):
     maxVal = lists[0][-1]
     for i in range(1,len(lists)):
@@ -36,8 +34,6 @@ def populateGraph(graph,lists):
     maxVal = findMax(lists)
     for aList in lists:
         list1 = toBinary(aList,maxVal)
-        print aList
         for i in range(maxVal):
             if list1[i] == 1:
                 graph[i+1] = addLists(list1,graph[i+1])
-        printing.printGraph(graph)
