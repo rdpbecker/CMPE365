@@ -83,6 +83,7 @@ def isSubset(list1,list2):
 ##
 ## Returns: the list of all maximal complete subgraphs of
 ##          connected
+##############################################################
 
 def findCycles(connected,maxVal,flag):
     cycles = []
