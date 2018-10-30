@@ -74,7 +74,11 @@ def initGraph(n):
 ## same list
 ##
 ## Parameters: graph - a graph with no edges and vertices 1
-##                     through n
+##                     through n, implemented as a dictionary 
+##                     with the set of vertices as the keys 
+##                     and the values as lists containing the 
+##                     weights of the edges between the key
+##                     and every other vertex
 ##             lists - a list of lists for which the 
 ##                     copresence is to be tested
 ##             n - the maximum value in lists
