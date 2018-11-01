@@ -1,3 +1,5 @@
+import setOperations as setops
+
 ##############################################################
 ## Given a weighted graph G1, creates an unweighted graph G2 
 ## with the same vertices where the edge G2(i->j) exists if 
@@ -47,14 +49,22 @@ def setIntersect(set1,set2):
             newSet.append(thing)
     return newSet
 
-def findCliques(connected,vertices,remaining):
-    if not remaining:
-        print vertices
+def subsets(length):
+    subsetList = []
+    for i in range(2**length-1,-1,-1):
+        subsetList.append(binaryToList(numToBinary(i,length),length))
+    return subsetList
+
+def findCliques(maximalList,connected,vertices,remaining,excluded):
+    if not remaining and not excluded:
+#        print vertices
+        maximalList.append(vertices)
     while remaining:
         vertex = remaining[0]
     #    print vertices, remaining
-        findCliques(connected,setUnion(vertices,vertex),setIntersect(remaining,connected[vertex]))
+        findCliques(maximalList,connected,setops.setUnion(vertices,vertex),setops.setIntersect(remaining,connected[vertex]),setops.setIntersect(excluded,connected[vertex]))
         remaining.pop(0)
+        excluded.append(vertex)
 
 if __name__ == "__main__":
     import sys
