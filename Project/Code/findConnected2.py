@@ -1,8 +1,34 @@
+##############################################################
+## Given a graph with vertices 1 to maxVal and another empty 
+## graph with the same vertices, fills in the empty graph so 
+## that i->j is 1 if i->j is greater than the threshold in the 
+## original graph and 0 otherwise
+##
+## Parameters: graph - the original (weighted) graph as a 
+##                     dictionary
+##             connected - an empty graph with the same
+##                         vertices as graph
+##             threshold - the threshold for the weights in
+##                         graph
+##             maxVal - the value of the maximum node in graph
+##
+## Returns: Nothing. The result is stored in connected
+##############################################################
+
 def aboveThreshold(graph,connected,threshold,maxVal):
     for key in graph.keys():
         for node in range(maxVal):
             if graph[key][node] >= threshold:
                 connected[key][node] = 1
+
+##############################################################
+## Converts a number to binary
+##
+## Parameters: n - the number to be converted
+##             length - the length of the output binary string
+##
+## Returns: the binary representation of n as a list
+##############################################################
 
 def numToBinary(n,length):
     aList = []
@@ -12,12 +38,31 @@ def numToBinary(n,length):
         n = n - k*(2**i)
     return aList
 
+##############################################################
+## Convert a binary list to a regular list
+## 
+## Parameters: binList - a list containing only 1s and 0s
+##             length - the length of the binary list
+##
+## Returns: a list containing k if and only if binList[k]=1
+##############################################################
+
 def binaryToList(binList,length):
     aList = []
     for i in range(length):
         if binList[i]:
             aList.append(i+1)
     return aList
+
+##############################################################
+## Finds all the subsets of {1,...,length} and returns them in 
+## a list
+##
+## Parameters: length - the maximum value in the list
+## 
+## Returns: a set containing all the subsets of 
+##          {1,...,length}
+##############################################################
 
 def subsets(length):
     subsetList = []
@@ -58,6 +103,17 @@ def isSubset(list1,list2):
         return 1
     return 0
     return subsetList
+
+##############################################################
+## Finds all the cliques in a graph called connected
+##
+## Parameters: connected - an unweighted graph implemented as
+##                         a dictionary
+##             maxVal - the maximum value of the vertices in 
+##                      connected
+##
+## Returns: a set of all the cliques in connected
+##############################################################
 
 def findCliques(connected,maxVal):
     cliques = []
