@@ -119,12 +119,19 @@ def findCliques(connected,maxVal):
     cliques = []
     for subset in subsets(maxVal):
         flag = 0
+        ## Check if the current subset is a subset of one of 
+        ## the cliques
         for clique in cliques:
             if isSubset(subset,clique):
                 flag = 1
+                ## Need to break out of this loop before we 
+                ## can continue
                 break
         if flag:
             continue
+        ## For the subgraph in question, take its adjacency 
+        ## matrix and determine from it whether the subgraph
+        ## is complete
         for i in subset:
             for j in subset:
                 if not connected[i][j-1]:
