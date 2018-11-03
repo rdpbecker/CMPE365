@@ -3,7 +3,8 @@ import setOperations as setops
 ##############################################################
 ## Given a weighted graph G1, creates an unweighted graph G2 
 ## with the same vertices where the edge G2(i->j) exists if 
-## the edge G1(i->j) has weight greater than the threshold
+## the edge G1(i->j) has weight greater than the threshold.
+## No edge is connected to itself in the output
 ##
 ## Parameters: graph - the original weighted graph
 ##             threshold - the threshold above which the
@@ -28,32 +29,25 @@ def aboveThreshold(graph,threshold,maxVal):
         connected[key] = list2
     return connected
 
-def setUnion(vertices,new):
-    flag = 1
-    newSet = []
-    for vertex in vertices:
-        if vertex == new:
-            flag = 0
-        newSet.append(vertex)
-    if flag:
-        newSet.append(new)
-    return newSet
-
-def setIntersect(set1,set2):
-    inBoth = {}
-    newSet = []
-    for thing in set1:
-        inBoth[thing] = 1
-    for thing in set2:
-        if thing in inBoth.keys():
-            newSet.append(thing)
-    return newSet
-
-def subsets(length):
-    subsetList = []
-    for i in range(2**length-1,-1,-1):
-        subsetList.append(binaryToList(numToBinary(i,length),length))
-    return subsetList
+##############################################################
+## Find all the cliques in connected using a recursive method.
+## The logic is explained in the lab report
+## 
+## Parameters: maximalList - a list to store all the cliques
+##             connected - the graph in which to find the 
+##                         cliques
+##             vertices - the vertices already in the clique 
+##                        being constructed 
+##             remaining - a list of all the vertices 
+##                         connected to every vertex in 
+##                         vertices
+##             excluded - the set of vertices which are not 
+##                        allowed to be in the clique being
+##                        constructed
+##
+## Returns: nothing. The list of cliques is stored in 
+##          maximalList
+##############################################################
 
 def findCliques(maximalList,connected,vertices,remaining,excluded):
     if not remaining and not excluded:
