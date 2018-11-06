@@ -39,6 +39,30 @@ def setIntersect(set1,set2):
     return newSet
 
 ##############################################################
+## Finds the difference between two sets
+## 
+## Parameters: set1 - the first set
+##             set2 - the second set
+##
+## Returns: the difference between set1 and set2
+##############################################################
+
+def setSubtract(set1,set2):
+    count1 = 0
+    count2 = 0
+    setSub = []
+    while count2 < len(set2):
+        if set1[count1] == set2[count2]:
+            count2 = count2 + 1
+        else:
+            setSub.append(set1[count1])
+        count1 = count1 + 1
+    while count1 < len(set1):
+        setSub.append(set1[count1])
+        count1 = count1 + 1
+    return setSub
+
+##############################################################
 ## Converts a number to a binary string with a specified
 ## length
 ## 
@@ -146,9 +170,12 @@ def subsetsByIndex(aList,maxVal):
 
 if __name__ == "__main__":
     import sys
-    length = len(sys.argv)-1
-    maxVal = int(sys.argv[-1])
-    aList = []
+    length = int(sys.argv[-1])+1
+    list1 = []
+    list2 = []
     for i in range(1,length):
-        aList.append(int(sys.argv[i]))
-    print numToSet(listToNum(aList,maxVal),maxVal)
+        list1.append(int(sys.argv[i]))
+    for i in range(length,len(sys.argv)-1):
+        list2.append(int(sys.argv[i]))
+    print list1,list2
+    print setSubtract(list1,list2)
