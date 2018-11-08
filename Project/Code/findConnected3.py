@@ -26,7 +26,8 @@ def aboveThreshold(graph,threshold,maxVal):
         for i in range(maxVal):
             if list1[i] >= threshold and (key != i+1):
                 list2.append(i+1)
-        connected[key] = list2
+        if list2:
+            connected[key] = list2
     return connected
 
 ##############################################################
@@ -50,26 +51,19 @@ def aboveThreshold(graph,threshold,maxVal):
 ##############################################################
 
 def findCliques(maximalList,connected,vertices,remaining,excluded):
-    if not remaining and not excluded:
+    if not excluded:
 #        print vertices
         maximalList.append(vertices)
-    while remaining:
-        vertex = remaining[0]
-    #    print vertices, remaining
+        return
+    minVertex = excluded[0]
+    maxlen = 0
+    for vertex in excluded:
+        if len(setops.setSubtract(remaining,connected[vertex])) > maxlen:
+            maxlen = len(setops.setSubtract(remaining,connected[vertex]))
+            minVertex = vertex
+    newSet = setops.setSubtract(remaining,connected[minVertex])
+    while newSet:
+        vertex = newSet[0]
         findCliques(maximalList,connected,setops.setUnion(vertices,vertex),setops.setIntersect(remaining,connected[vertex]),setops.setIntersect(excluded,connected[vertex]))
-        remaining.pop(0)
-        excluded.append(vertex)
-
-if __name__ == "__main__":
-    import sys
-    num = len(sys.argv)-1
-    list1 = []
-    list2 = []
-    breakIndex = int(sys.argv[num])
-    for i in range(1,breakIndex+1):
-        list1.append(int(sys.argv[i]))
-    for i in range(breakIndex+1,num):
-        list2.append(int(sys.argv[i]))
-    print list1
-    print list2
-    print setIntersect(list1,list2)
+        remaining.remove(vertex)
+        newSet = setops.setSubtract(remaining,connected[minVertex])

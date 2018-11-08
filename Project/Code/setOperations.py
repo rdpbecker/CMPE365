@@ -51,7 +51,7 @@ def setSubtract(set1,set2):
     count1 = 0
     count2 = 0
     setSub = []
-    while count2 < len(set2):
+    while count1 < len(set1) and count2 < len(set2):
         if set1[count1] == set2[count2]:
             count2 = count2 + 1
         else:
