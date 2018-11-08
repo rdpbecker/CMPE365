@@ -17,9 +17,16 @@
 
 def aboveThreshold(graph,connected,threshold,maxVal):
     for key in graph.keys():
+        nonzero = 0
         for node in range(maxVal):
             if graph[key][node] >= threshold:
                 connected[key][node] = 1
+                if node != key+1:
+                    nonzero = 1
+        if nonzero:
+            connected[key].append(1)
+        else:
+            connected[key].append(0)
 
 ##############################################################
 ## Converts a number to binary
@@ -47,12 +54,12 @@ def numToBinary(n,length):
 ## Returns: a list containing k if and only if binList[k]=1
 ##############################################################
 
-def binaryToList(binList,length):
-    aList = []
+def binaryToList(aList,binList,length):
+    newList = []
     for i in range(length):
         if binList[i]:
-            aList.append(i+1)
-    return aList
+            newList.append(aList[i])
+    return newList
 
 ##############################################################
 ## Finds all the subsets of {1,...,length} and returns them in 
@@ -64,10 +71,14 @@ def binaryToList(binList,length):
 ##          {1,...,length}
 ##############################################################
 
-def subsets(length):
+def subsets(aList,length):
     subsetList = []
-    for i in range(2**length-1,-1,-1):
-        subsetList.append(binaryToList(numToBinary(i,length),length))
+    i = 2**length-1
+    while i>=0:
+        if not (2**length-1-i)%100:
+            print 2**length-1-i
+        subsetList.append(binaryToList(aList,numToBinary(i,length),length))
+        i = i-1
     return subsetList
 
 ##############################################################
@@ -117,18 +128,28 @@ def isSubset(list1,list2):
 
 def findCliques(connected,maxVal):
     cliques = []
-    for subset in subsets(maxVal):
+    nonzeroNodes = []
+    for vertex in connected.keys():
+        if connected[vertex][-1]:
+            nonzeroNodes.append(vertex)
+    length = len(nonzeroNodes)
+    print 2**length
+    count = 0
+    for subset in subsets(nonzeroNodes,len(nonzeroNodes)):
+        count = count+1
+        if not count%100:
+            print count
         flag = 0
-        ## Check if the current subset is a subset of one of 
-        ## the cliques
-        for clique in cliques:
-            if isSubset(subset,clique):
-                flag = 1
-                ## Need to break out of this loop before we 
-                ## can continue
-                break
-        if flag:
-            continue
+#        ## Check if the current subset is a subset of one of 
+#        ## the cliques
+#        for clique in cliques:
+#            if isSubset(subset,clique):
+#                flag = 1
+#                ## Need to break out of this loop before we 
+#                ## can continue
+#                break
+#        if flag:
+#            continue
         ## For the subgraph in question, take its adjacency 
         ## matrix and determine from it whether the subgraph
         ## is complete
@@ -141,7 +162,9 @@ def findCliques(connected,maxVal):
                 break
         if flag:
             continue
-        cliques.insert(0,subset)
+        cliques.append(subset)
+    cliques.pop(-1)
+    return cliques
 
 # if __name__ == "__main__":
 #    import sys

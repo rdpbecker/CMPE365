@@ -29,53 +29,62 @@ def main(threshold,testnum,flag):
     print "Final Graph:"
     printing.printGraph(graph)
     ## Find the graph of connections and print it
-    connected = find.aboveThreshold(graph,threshold,n)
-    print "The connections are"
-    printing.printGraph(connected)
-    ## From the graph of connections, find all the maximal 
-    ## subsets of passengers who were on the same flight
-    ## more than the threshold
-    cliques = []
-    print "The cliques are:\n"
-    find.findCliques(cliques,connected,[],connected.keys(),[])
-    printing.printLists(cliques)
-    ## For every clique, find all the subsets of that clique,
-    ## indexed by number, and add them to a list
-    allSubsetsList = []
-    for clique in cliques:
-        allSubsetsList.extend(setops.subsetsByIndex(clique,n))
-    ## To avoid duplicates, add every one of the subsets to a 
-    ## dictionary. The list of keys is implemented as a hash 
-    ## table so it's fast to look up key values, and if we add
-    ## a key twice it still only exists once in the key list
-    allSubsetsDict = {}
-    for subset in allSubsetsList:
-        allSubsetsDict[subset] = 1
-    ## Finally, for each of the indexes in the dictionary, 
-    ## convert them back to sets
-    print "All the subsets are:\n"
-    uniqueSubsetKeys = sorted(allSubsetsDict.keys())
-    uniqueSubsetKeys.reverse()
-    uniqueSubsetKeys.pop(-1)
-    uniqueSubsets = []
-    for num in uniqueSubsetKeys:
-        uniqueSubsets.append(setops.numToSet(num,n))
+    if flag:
+        print "Using 3:\n"
+        connected = find3.aboveThreshold(graph,threshold,n)
+#        print "The connections are"
+        printing.printGraph(connected)
+        ## From the graph of connections, find all the maximal 
+        ## subsets of passengers who were on the same flight
+        ## more than the threshold
+        cliques = []
+        print "The cliques are:\n"
+        find3.findCliques(cliques,connected,[],connected.keys(),connected.keys())
+        printing.printLists(cliques)
+        ## For every clique, find all the subsets of that clique,
+        ## indexed by number, and add them to a list
+        allSubsetsList = []
+        for clique in cliques:
+            allSubsetsList.extend(setops.subsetsByIndex(clique,n))
+        ## To avoid duplicates, add every one of the subsets to a 
+        ## dictionary. The list of keys is implemented as a hash 
+        ## table so it's fast to look up key values, and if we add
+        ## a key twice it still only exists once in the key list
+        allSubsetsDict = {}
+        for subset in allSubsetsList:
+            allSubsetsDict[subset] = 1
+        ## Finally, for each of the indexes in the dictionary, 
+        ## convert them back to sets
+        print "All the subsets are:\n"
+        uniqueSubsetKeys = sorted(allSubsetsDict.keys())
+        uniqueSubsetKeys.reverse()
+        uniqueSubsetKeys.pop(-1)
+        uniqueSubsets = []
+        for num in uniqueSubsetKeys:
+            uniqueSubsets.append(setops.numToSet(num,n))
 
-#    printing.printLists(uniqueSubsets)
-
-    return uniqueSubsets
+        printing.printLists(uniqueSubsets)
+        return uniqueSubsets
+    else:
+        print "Using 2:\n"
+        connected = popG.initGraph(n)
+        find2.aboveThreshold(graph,connected,threshold,n)
+        printing.printGraph(connected)
+        cliques = find2.findCliques(connected,n)
+        printing.printLists(cliques)
 
 ## Set up the command line arguments and import all the
 ## other modules in this directory
 if __name__ == "__main__":
-    import sys, fileio as io, populateGraph as popG, printing, findConnected3 as find, setOperations as setops
+    import sys, fileio as io, populateGraph as popG, printing, findConnected2 as find2, findConnected3 as find3, setOperations as setops
     threshold = int(sys.argv[1])
     testnum = int(sys.argv[2])
     flag = int(sys.argv[3])
-    if flag:
-        times = 0
-        for i in range(5):
-            times = times + main(threshold,testnum,flag)
-        print times/5
-    else:
-        printing.printLists(main(threshold,testnum,flag))
+#    if flag:
+#        times = 0
+#        for i in range(5):
+#            times = times + main(threshold,testnum,flag)
+#        print times/5
+#    else:
+#        printing.printLists(main(threshold,testnum,flag))
+    main(threshold,testnum,flag)
