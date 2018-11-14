@@ -69,8 +69,10 @@ def main(threshold,testnum,flag):
         print "Using 2:\n"
         connected = popG.initGraph(n)
         find2.aboveThreshold(graph,connected,threshold,n)
+        print "The graph of connections"
         printing.printGraph(connected)
         cliques = find2.findCliques(connected,n)
+        print "All the connected groups are"
         printing.printLists(cliques)
 
 ## Set up the command line arguments and import all the

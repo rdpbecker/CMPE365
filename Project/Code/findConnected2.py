@@ -75,8 +75,8 @@ def subsets(aList,length):
     subsetList = []
     i = 2**length-1
     while i>=0:
-        if not (2**length-1-i)%100:
-            print 2**length-1-i
+#        if not (2**length-1-i)%100:
+#            print 2**length-1-i
         subsetList.append(binaryToList(aList,numToBinary(i,length),length))
         i = i-1
     return subsetList
@@ -133,12 +133,12 @@ def findCliques(connected,maxVal):
         if connected[vertex][-1]:
             nonzeroNodes.append(vertex)
     length = len(nonzeroNodes)
-    print 2**length
+#    print 2**length
     count = 0
     for subset in subsets(nonzeroNodes,len(nonzeroNodes)):
         count = count+1
-        if not count%100:
-            print count
+#        if not count%100:
+#            print count
         flag = 0
 #        ## Check if the current subset is a subset of one of 
 #        ## the cliques
